@@ -1,12 +1,19 @@
-FROM alpine:3.4
+FROM alpine:3.6
 
-MAINTAINER WebOps <webops_team@pebble.com>
+ENV AWSCLI_VERSION 1.11.117
+
+RUN adduser -S awscli && \
+    mkdir /aws && \
+    ln -s /aws /home/awscli/.aws && \
+    chown awscli /aws /home/awscli/.aws
 
 RUN apk --update add \
     python \
     py-pip \
-    jq \
-    && pip install awscli \
+    && pip install awscli==$AWSCLI_VERSION \
     && apk del py-pip \
     && rm -rf /var/cache/apk/*
+
+USER awscli
+ENTRYPOINT ["/usr/bin/aws"]
 

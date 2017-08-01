@@ -4,8 +4,8 @@ A simple docker that allows you to pass through aws-cli commands
 ### Example usage
 
 ```
-docker pull pebbletech/docker-aws-cli
-docker run -v ${HOME}/.aws/credentials:/root/.aws/credentials pebbletech/docker-aws-cli aws s3api list-objects --bucket bucket --prefix folder/ --output json
+docker pull meteor/aws-cli
+docker run -v ${HOME}/.aws/:/aws meteor/aws-cli aws sts get-caller-identity
 ```
 
-Basically, `aws` becomes `docker run -v ${HOME}/.aws/credentials:/root/.aws/credentials pebbletech/docker-aws-cli aws`.
+Basically, `aws` becomes `docker run -v ${HOME}/.aws/credentials:/root/.aws/credentials meteor/aws-cli aws`.

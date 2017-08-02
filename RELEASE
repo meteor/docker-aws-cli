@@ -1,0 +1,8 @@
+Released via automated build at dockerhub:
+https://hub.docker.com/r/meteor/aws-cli/
+
+Dockerhub automatically builds `latest` when `master` is updated.
+Dockerhub automatically builds tags.
+
+By convention, tags should match the packaged awscli version.
+

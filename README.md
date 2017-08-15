@@ -1,6 +1,8 @@
 # docker-aws-cli
 A simple docker that allows you to pass through aws-cli commands
 
+Published to [meteor/aws-cli](https://hub.docker.com/r/meteor/aws-cli/tags/)
+
 ### Example usage
 
 ```

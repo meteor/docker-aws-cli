@@ -15,5 +15,6 @@ RUN apk --update add \
     && rm -rf /var/cache/apk/*
 
 USER awscli
+
 ENTRYPOINT ["/usr/bin/aws"]
 

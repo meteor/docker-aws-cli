@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-ENV AWSCLI_VERSION=1.11.136
+ENV AWSCLI_VERSION=1.11.139
 
 RUN adduser -S awscli && \
     mkdir /aws && \
